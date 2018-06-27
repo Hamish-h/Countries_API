@@ -11,5 +11,12 @@ Countries.prototype.bindEvents = function () {
 };
 
 Countries.prototype.getData = function () {
-  const url = 'http://https://restcountries.eu/?json'
+  const url = 'https://restcountries.eu/rest/v2/all?json'
+  request = new Request(url);
+  request.get((data) => {
+    console.log(data);
+    PubSub.publish('CountriesFact:data-ready', data);
+  });
 };
+
+module.exports = Countries

@@ -1,0 +1,4 @@
+
+const CountriesMenuView = function () {
+  
+}
