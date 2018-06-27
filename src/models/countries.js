@@ -3,7 +3,6 @@ Const Countries = function (){
 
 }
 
-
 Countries.prototype.bindEvents = function () {
   PubSub.subscribe('CountriesFormView:submit', (event) => {
     this.handleCountriesSubmit(event.detail):
